@@ -53,7 +53,6 @@ a{color:inherit}
 /* hero */
 .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-block:48px 56px}
 .hero h1{font-size:clamp(2.2rem,5.4vw,3.6rem);font-weight:700;margin:12px 0 16px}
-.hero h1 mark{background:linear-gradient(transparent 58%,var(--sun) 58%);color:inherit;padding:0 .1em}
 .hero .lead{font-size:1.15rem;color:var(--muted);max-width:34rem}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .price-panel{background:var(--brand);color:var(--brand-ink);border-radius:22px;padding:26px;min-width:0}
@@ -164,7 +163,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 2
     <div class="wrap">
       <div>
         <p class="eyebrow">Casa de ração · Belford Roxo</p>
-        <h1>Ração, veterinário, <mark>banho e tosa</mark> num lugar só.</h1>
+        <h1>Ração, veterinário, banho e tosa num lugar só.</h1>
         <p class="lead">Na Pablo Pet você compra a ração do seu cão ou gato, leva para o banho e tosa e ainda cuida da saúde dele, com consulta e vacinas.</p>
         <div class="cta">
           <a class="btn btn-wa" href="https://wa.me/5521979873356?text=Ol%C3%A1%2C%20Pablo%20Pet!%20Quero%20falar%20com%20voc%C3%AAs." target="_blank" rel="noopener">Chamar no WhatsApp</a>
@@ -385,9 +384,23 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 2
     {n:'Ração Fofinho',c:'Rações',p:45.99,k:'bag',cor:'#A5479A',t:'Fofinho'},
     {n:'Ração Tam Tam',c:'Rações',p:43.99,k:'bag',cor:'#D9731A',t:'Tam Tam'},
     {n:'Ração Bam Bam',c:'Rações',p:46.80,k:'bag',cor:'#138D90',t:'Bam Bam'},
+    {n:'Ração Mais Pet',c:'Rações',p:41.50,k:'bag',cor:'#B8860B',t:'Mais Pet'},
+    {n:'Ração Dog Show',c:'Rações',p:47.90,k:'bag',cor:'#7A3E1D',t:'Dog Show'},
     {n:'Biscoito nutritivo',c:'Petiscos',p:45.00,desde:true,k:'biscoito'},
     {n:'Brinquedos para cães',c:'Brinquedos',p:10.00,desde:true,k:'caes'},
     {n:'Brinquedos para gatos',c:'Brinquedos',p:10.00,desde:true,k:'gatos'},
+    {n:'Bolinha de borracha',c:'Brinquedos',p:10.00,k:'bola'},
+    {n:'Corda com nós',c:'Brinquedos',p:14.90,k:'corda'},
+    {n:'Mordedor de osso',c:'Brinquedos',p:18.90,k:'osso'},
+    {n:'Varinha com penas para gatos',c:'Brinquedos',p:12.90,k:'varinha'},
+    {n:'Arranhador para gatos',c:'Brinquedos',p:29.90,k:'arranhador'},
+    {n:'Shampoo pet',c:'Higiene',p:19.90,k:'frasco',cor:'#2F9E8F',t:'Shampoo'},
+    {n:'Condicionador pet',c:'Higiene',p:21.90,k:'frasco',cor:'#8A5CC2',t:'Condic.'},
+    {n:'Escova removedora de pelos',c:'Higiene',p:24.90,k:'escova'},
+    {n:'Cortador de unhas',c:'Higiene',p:22.00,k:'unha'},
+    {n:'Lenços umedecidos',c:'Higiene',p:15.90,k:'lenco'},
+    {n:'Tapete higiênico (pacote)',c:'Higiene',p:34.90,k:'tapete'},
+    {n:'Areia sanitária para gatos',c:'Higiene',p:18.90,k:'areia'},
     {n:'Camas para pets',c:'Camas',p:40.00,desde:true,k:'cama'}
   ];
 
@@ -432,6 +445,72 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 2
       '<circle cx="140" cy="158" r="8" fill="#F2B84B"/><line x1="140" y1="152" x2="140" y2="164" stroke="#B9801A" stroke-width="2"/>'+
       '<line x1="34" y1="34" x2="112" y2="86" stroke="#8A5A2B" stroke-width="5" stroke-linecap="round"/>'+
       '<g transform="translate(118 90)"><ellipse rx="8" ry="22" transform="rotate(-50)" fill="#E84F8C"/><ellipse rx="8" ry="22" transform="rotate(-20)" fill="#F2B84B"/><ellipse rx="8" ry="22" transform="rotate(10)" fill="#3A8DDE"/></g>';
+    }else if(i.k==='bola'){
+      s=sombra+
+      '<circle cx="100" cy="100" r="62" fill="#F2B84B"/>'+
+      '<path d="M44 80q56 34 112 0M44 120q56-34 112 0" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>'+
+      '<circle cx="78" cy="72" r="10" fill="#fff" opacity=".35"/>';
+    }else if(i.k==='corda'){
+      s=sombra+
+      '<path d="M30 130q70-70 140 0" stroke="#D9A441" stroke-width="16" fill="none" stroke-linecap="round"/>'+
+      '<path d="M30 130q70-70 140 0" stroke="#fff" stroke-opacity=".5" stroke-width="4" fill="none" stroke-dasharray="6 8"/>'+
+      '<circle cx="34" cy="132" r="18" fill="#E5533D"/><circle cx="166" cy="132" r="18" fill="#3A8DDE"/>'+
+      '<circle cx="100" cy="82" r="12" fill="#C98F32"/>';
+    }else if(i.k==='osso'){
+      s=sombra+
+      '<g transform="translate(100 104) rotate(-30)" fill="#3FB68B"><rect x="-56" y="-14" width="112" height="28" rx="12"/><circle cx="-58" cy="-16" r="18"/><circle cx="-58" cy="16" r="18"/><circle cx="58" cy="-16" r="18"/><circle cx="58" cy="16" r="18"/></g>'+
+      '<g transform="translate(100 104) rotate(-30)" stroke="#fff" stroke-opacity=".6" stroke-width="4" stroke-linecap="round"><line x1="-30" y1="-4" x2="30" y2="-4"/><line x1="-30" y1="6" x2="30" y2="6"/></g>';
+    }else if(i.k==='varinha'){
+      s=
+      '<line x1="36" y1="170" x2="132" y2="64" stroke="#8A5A2B" stroke-width="7" stroke-linecap="round"/>'+
+      '<path d="M132 64q10 28 4 52" stroke="#555" stroke-width="2" fill="none"/>'+
+      '<g transform="translate(138 126)"><ellipse rx="7" ry="24" transform="rotate(-35)" fill="#E84F8C"/><ellipse rx="7" ry="24" transform="rotate(-8)" fill="#F2B84B"/><ellipse rx="7" ry="24" transform="rotate(20)" fill="#3A8DDE"/><ellipse rx="7" ry="22" transform="rotate(45)" fill="#3FB68B"/></g>'+
+      '<circle cx="132" cy="64" r="6" fill="#8A5A2B"/>';
+    }else if(i.k==='arranhador'){
+      s=sombra+
+      '<rect x="40" y="160" width="120" height="22" rx="8" fill="#8A6A4B"/>'+
+      '<rect x="84" y="50" width="32" height="112" fill="#D9B77A"/>'+
+      '<g stroke="#B8924F" stroke-width="3"><line x1="84" y1="70" x2="116" y2="78"/><line x1="84" y1="92" x2="116" y2="100"/><line x1="84" y1="114" x2="116" y2="122"/><line x1="84" y1="136" x2="116" y2="144"/></g>'+
+      '<rect x="56" y="36" width="88" height="20" rx="10" fill="#8A6A4B"/>'+
+      '<line x1="132" y1="56" x2="132" y2="92" stroke="#555" stroke-width="2"/><circle cx="132" cy="98" r="9" fill="#E5533D"/>';
+    }else if(i.k==='frasco'){
+      s=sombra+
+      '<rect x="66" y="66" width="68" height="118" rx="16" fill="'+i.cor+'"/>'+
+      '<rect x="86" y="42" width="28" height="28" rx="6" fill="#333"/><rect x="92" y="28" width="16" height="16" rx="3" fill="#333"/><rect x="92" y="28" width="30" height="8" rx="3" fill="#333"/>'+
+      '<rect x="76" y="100" width="48" height="54" rx="8" fill="#fff"/>'+
+      '<text x="100" y="124" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="12" fill="#1B1B1B">'+i.t+'</text>'+
+      '<g fill="'+i.cor+'"><ellipse cx="100" cy="143" rx="5" ry="4"/><circle cx="93" cy="137" r="2"/><circle cx="99" cy="133" r="2"/><circle cx="105" cy="133" r="2"/><circle cx="111" cy="137" r="2"/></g>';
+    }else if(i.k==='escova'){
+      s=sombra+
+      '<rect x="78" y="106" width="44" height="76" rx="18" fill="#2F6DB5"/>'+
+      '<rect x="40" y="52" width="120" height="62" rx="16" fill="#E5533D"/>'+
+      '<g stroke="#fff" stroke-width="3" stroke-linecap="round"><line x1="56" y1="64" x2="56" y2="76"/><line x1="72" y1="64" x2="72" y2="76"/><line x1="88" y1="64" x2="88" y2="76"/><line x1="104" y1="64" x2="104" y2="76"/><line x1="120" y1="64" x2="120" y2="76"/><line x1="136" y1="64" x2="136" y2="76"/><line x1="56" y1="88" x2="56" y2="100"/><line x1="72" y1="88" x2="72" y2="100"/><line x1="88" y1="88" x2="88" y2="100"/><line x1="104" y1="88" x2="104" y2="100"/><line x1="120" y1="88" x2="120" y2="100"/><line x1="136" y1="88" x2="136" y2="100"/></g>';
+    }else if(i.k==='unha'){
+      s=sombra+
+      '<path d="M44 150L128 52" stroke="#9AA6B2" stroke-width="14" stroke-linecap="round"/>'+
+      '<path d="M70 168L152 84" stroke="#7D8A97" stroke-width="14" stroke-linecap="round"/>'+
+      '<path d="M44 150q-22 20-6 32M70 168q-22 8-14 20" stroke="#2F6DB5" stroke-width="12" fill="none" stroke-linecap="round"/>'+
+      '<circle cx="124" cy="78" r="7" fill="#3A4652"/>';
+    }else if(i.k==='lenco'){
+      s=sombra+
+      '<rect x="56" y="70" width="88" height="112" rx="14" fill="#fff" stroke="#2F9E8F" stroke-width="4"/>'+
+      '<rect x="56" y="50" width="88" height="30" rx="10" fill="#2F9E8F"/>'+
+      '<path d="M84 50q16-26 32 0" fill="#fff" stroke="#2F9E8F" stroke-width="3"/>'+
+      '<text x="100" y="122" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="14" fill="#1B1B1B">Lenços</text>'+
+      '<text x="100" y="142" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="600" font-size="11" fill="#47625C">umedecidos</text>';
+    }else if(i.k==='tapete'){
+      s=sombra+
+      '<rect x="36" y="46" width="128" height="128" rx="12" fill="#fff" stroke="#9FD6EA" stroke-width="4"/>'+
+      '<g stroke="#CBE7F2" stroke-width="2"><line x1="36" y1="78" x2="164" y2="78"/><line x1="36" y1="110" x2="164" y2="110"/><line x1="36" y1="142" x2="164" y2="142"/><line x1="68" y1="46" x2="68" y2="174"/><line x1="100" y1="46" x2="100" y2="174"/><line x1="132" y1="46" x2="132" y2="174"/></g>'+
+      '<g fill="#3A8DDE"><ellipse cx="100" cy="116" rx="16" ry="13"/><circle cx="80" cy="98" r="6"/><circle cx="92" cy="86" r="6"/><circle cx="108" cy="86" r="6"/><circle cx="120" cy="98" r="6"/></g>';
+    }else if(i.k==='areia'){
+      s=sombra+
+      '<path d="M54 60h92l8 118q0 8-8 8H54q-8 0-8-8z" fill="#6B8E9B"/>'+
+      '<rect x="50" y="46" width="100" height="18" rx="6" fill="#000" opacity=".22"/>'+
+      '<rect x="62" y="84" width="76" height="52" rx="10" fill="#fff"/>'+
+      '<text x="100" y="106" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="14" fill="#1B1B1B">Areia</text>'+
+      '<text x="100" y="124" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="600" font-size="11" fill="#47625C">para gatos</text>'+
+      '<g fill="#F4E3C6"><circle cx="76" cy="164" r="5"/><circle cx="92" cy="170" r="5"/><circle cx="108" cy="164" r="5"/><circle cx="124" cy="170" r="5"/></g>';
     }else{
       s=sombra+
       '<ellipse cx="100" cy="142" rx="82" ry="40" fill="#7A5C99"/>'+
@@ -442,7 +521,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 2
     }
     return ini+s+'</svg>';
   }
-  var cats=['Todos','Rações','Petiscos','Brinquedos','Camas'];
+  var cats=['Todos','Rações','Petiscos','Brinquedos','Higiene','Camas'];
   var atual='Todos';
   var chips=document.getElementById('chips');
   var lista=document.getElementById('lista');
